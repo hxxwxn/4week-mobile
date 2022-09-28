@@ -1,0 +1,47 @@
+// 자세히 알아보기 버튼 //
+.link-detail {
+    display: block;
+    width: 125px;
+    height: 40px;
+    border: 1px solid #222;
+    text-align: center;
+    line-height: 36px;
+    /* border size minus */
+    transition: all 0.3s;
+    font-size: 12px;
+    margin-bottom: 40px;
+
+    .sc-intro & {
+        margin: 0 auto;
+        margin-bottom: 40px
+    }
+}
+
+
+
+// 블릿
+.pagination {
+    @include position();
+    bottom: 0;
+    display: flex;
+    gap: 17.5px;
+    height: 40px;
+    align-items: center;
+    .bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        .sc-slide & {
+            border: 2px solid #fff;
+            &.active {
+                background: #fff;
+            }
+        }
+        .sc-review & {
+            border: 2px solid #ddd;
+            &.active {
+                background: #ddd;
+            }
+        }
+    }
+}

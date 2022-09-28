@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0px 3px 2px 0px rgba(0,0,0,.1);
+
+    .logo {
+        @include position('ct');
+
+        a {
+            display: block;
+
+            img {
+                width: 132.5px;
+                height: 17px;
+            }
+        }
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: 18px;
+
+        img {
+            width: 25px;
+            height: 19px;
+        }
+    }
+
+    .cart {
+        display: block;
+        margin-right: 18px;
+
+        img {
+            width: 23px;
+            height: 23px;
+        }
+    }
+}
