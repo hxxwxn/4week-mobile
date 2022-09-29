@@ -15,6 +15,11 @@
         margin: 0 auto;
         margin-bottom: 40px
     }
+
+    .sc-review & {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -37,11 +42,46 @@
                 background: #fff;
             }
         }
-        .sc-review & {
-            border: 2px solid #ddd;
-            &.active {
-                background: #ddd;
-            }
+        
+    }
+}
+
+.sc-review .page {
+    height: 40px;
+    display: flex;
+    gap: 17.5px;
+    align-items: center;
+    justify-content: center;
+    .bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        &.active {
+            background: #ddd;
+        }
+    }
+}
+
+
+// 탑버튼 
+.top-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+   
+    border-radius: 50%;
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    background: #000;
+    opacity: .8;
+    a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        img {
+            @include position('ct');
+            width: 14px;
+            height: 10px;
         }
     }
 }

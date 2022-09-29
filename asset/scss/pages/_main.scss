@@ -56,6 +56,7 @@
                 height: 200px;
                 background: rgba(0, 0, 0, .7);
                 padding: 22px 15px;
+
                 h3 {
                     font-size: 16px;
                     font-weight: bold;
@@ -68,80 +69,72 @@
                     line-height: 20px;
                     text-align: justify;
                 }
-        }
-    }
-}
-
-// 이벤트
-.sc-events {
-    margin-top: 40px;
-    padding: 0 35px;
-    .event-list {
-
-        .event-item {
-
-            .text-box {
-                
-                em {
-                    padding: 15px 0;
-                    display: block;
-                    font-size: 12px;
-                    line-height: 14px;
-                    color: #858585;
-                }
-
-                strong {
-                    font-size: 15px;
-                    font-weight: bold;
-                }
-
-                p {
-                    margin: 10px 0 20px;
-                    @include ellipsis(1,18px);
-                }
             }
-            
         }
     }
-}
 
-// 리뷰영역
-.sc-review {
-    position: relative;
-    padding-bottom: 80px;
+    // 이벤트
+    .sc-events {
+        margin-top: 40px;
+        padding: 0 35px;
 
-    .headline {
-        padding: 33px 0 70px;
+        .event-list {
+
+            .event-item {
+
+                .text-box {
+
+                    em {
+                        padding: 15px 0;
+                        display: block;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #858585;
+                    }
+
+                    strong {
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        margin: 10px 0 20px;
+                        @include ellipsis(1, 18px);
+                    }
+                }
+
+            }
+        }
     }
 
-    .rv-wrap {
+    // 리뷰영역
+    .sc-review {
+        padding: 0 30px;
         position: relative;
 
-        .rv-slide {
-            display: flex;
-            justify-content: space-between;
+        .headline {
+            margin-bottom: 25px;
+        }
 
-            &>div {
-                width: 520px;
-            }
+
+        .rv-slide {
 
             .text-box {
                 position: relative;
-                padding: 25px 0;
-                width: 520px;
-                height: 350px;
+                padding: 16px 0 20px;
+
 
                 strong {
-                    font-size: 22px;
+                    font-size: 15px;
                     @include ellip;
                     font-weight: bold;
-                    line-height: 28px;
+                    line-height: 20px;
                 }
 
                 p {
-                    font-size: 18px;
-                    @include ellipsis(6, 32px);
-                    margin-top: 7px;
+                    font-size: 13px;
+                    @include ellipsis(2, 20px);
+                    margin-top: 8px;
                     text-align: justify;
                 }
 
@@ -152,29 +145,27 @@
             }
         }
     }
-}
 
-// 게시판
-.sc-board {
-    padding: 30px 0 120px;
-    display: flex;
-    justify-content: space-between;
+    // 게시판
+    .sc-board {
+        padding: 27px 20px 60px;
 
-    .bd-flex {
-        width: 510px;
-
-        .bd-upper {
+        .board .bd-upper {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid #ddd;
+            padding: 10px 0;
 
             .headline-medium {
-                font-size: 22px;
-                line-height: 40px;
+                font-size: 16px;
+                line-height: 20px;
                 font-weight: 500;
-                padding: 10px 0;
-                margin-left: 10px;
+            }
+
+            .link-plus {
+                width: 30px;
+                height: 30px;
             }
         }
 
@@ -184,22 +175,21 @@
 
                 a {
                     display: flex;
-                    margin-left: 10px;
 
                     .date {
                         color: #888;
-                        line-height: 60px;
+                        line-height: 50px;
                     }
 
                     .text {
-                        margin-left: 25px;
-                        line-height: 60px;
+                        margin-left: 22px;
+                        line-height: 50px;
                         @include ellip;
 
                     }
                 }
             }
         }
+
     }
-}
 }

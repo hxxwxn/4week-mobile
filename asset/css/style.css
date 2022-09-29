@@ -46,6 +46,7 @@ table {
 }
 
 body {
+  position: relative;
   font-family: "Noto Sans KR", sans-serif;
   /* 영문은 필요시 사용 */
   letter-spacing: -0.025em;
@@ -118,6 +119,67 @@ img {
   height: 23px;
 }
 
+.footer .sc-sns {
+  background: #d71609;
+}
+.footer .sc-sns .sns-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+.footer .sc-sns .sns-list .sns-item a {
+  display: block;
+}
+.footer .sc-sns .sns-list .sns-item a img {
+  width: 35px;
+  height: 35px;
+}
+.footer .footer-group {
+  background: #aaa;
+  padding: 35px 20px;
+  color: #fff;
+}
+.footer .footer-group .sc-cs {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding-top: 12px;
+}
+.footer .footer-group .sc-cs h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 15px;
+  font-weight: 500;
+}
+.footer .footer-group .sc-cs .time {
+  line-height: 15px;
+  margin: 10px 0 15px;
+}
+.footer .footer-group .sc-cs .tel {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 15px;
+}
+.footer .footer-group .group-info {
+  margin-top: 42px;
+}
+.footer .footer-group .group-info > a img {
+  width: 135px;
+  height: 17px;
+}
+.footer .footer-group .group-info .addr-wrap {
+  margin-top: 22px;
+}
+.footer .footer-group .group-info .addr-wrap .addr-box {
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .link-detail {
   display: block;
   width: 125px;
@@ -133,6 +195,10 @@ img {
 .sc-intro .link-detail {
   margin: 0 auto;
   margin-bottom: 40px;
+}
+.sc-review .link-detail {
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .pagination {
@@ -156,11 +222,45 @@ img {
 .sc-slide .pagination .bullet.active {
   background: #fff;
 }
-.sc-review .pagination .bullet {
+
+.sc-review .page {
+  height: 40px;
+  display: flex;
+  gap: 17.5px;
+  align-items: center;
+  justify-content: center;
+}
+.sc-review .page .bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   border: 2px solid #ddd;
 }
-.sc-review .pagination .bullet.active {
+.sc-review .page .bullet.active {
   background: #ddd;
+}
+
+.top-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  background: #000;
+  opacity: 0.8;
+}
+.top-btn a {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.top-btn a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 10px;
 }
 
 #main {
@@ -245,88 +345,73 @@ img {
   display: -webkit-box;
 }
 #main .sc-review {
+  padding: 0 30px;
   position: relative;
-  padding-bottom: 80px;
 }
 #main .sc-review .headline {
-  padding: 33px 0 70px;
+  margin-bottom: 25px;
 }
-#main .sc-review .rv-wrap {
+#main .sc-review .rv-slide .text-box {
   position: relative;
+  padding: 16px 0 20px;
 }
-#main .sc-review .rv-wrap .rv-slide {
-  display: flex;
-  justify-content: space-between;
-}
-#main .sc-review .rv-wrap .rv-slide > div {
-  width: 520px;
-}
-#main .sc-review .rv-wrap .rv-slide .text-box {
-  position: relative;
-  padding: 25px 0;
-  width: 520px;
-  height: 350px;
-}
-#main .sc-review .rv-wrap .rv-slide .text-box strong {
-  font-size: 22px;
+#main .sc-review .rv-slide .text-box strong {
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
   white-space: nowrap;
   font-weight: bold;
-  line-height: 28px;
+  line-height: 20px;
 }
-#main .sc-review .rv-wrap .rv-slide .text-box p {
-  font-size: 18px;
+#main .sc-review .rv-slide .text-box p {
+  font-size: 13px;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-height: 32px;
-  max-height: 192px;
+  line-height: 20px;
+  max-height: 40px;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 2;
   display: -webkit-box;
-  margin-top: 7px;
+  margin-top: 8px;
   text-align: justify;
 }
-#main .sc-review .rv-wrap .rv-slide .text-box .link-detail {
+#main .sc-review .rv-slide .text-box .link-detail {
   position: absolute;
   bottom: 25px;
 }
 #main .sc-board {
-  padding: 30px 0 120px;
-  display: flex;
-  justify-content: space-between;
+  padding: 27px 20px 60px;
 }
-#main .sc-board .bd-flex {
-  width: 510px;
-}
-#main .sc-board .bd-flex .bd-upper {
+#main .sc-board .board .bd-upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid #ddd;
-}
-#main .sc-board .bd-flex .bd-upper .headline-medium {
-  font-size: 22px;
-  line-height: 40px;
-  font-weight: 500;
   padding: 10px 0;
-  margin-left: 10px;
 }
-#main .sc-board .bd-flex .bd-list .bd-item {
+#main .sc-board .board .bd-upper .headline-medium {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+#main .sc-board .board .bd-upper .link-plus {
+  width: 30px;
+  height: 30px;
+}
+#main .sc-board .bd-list .bd-item {
   border-bottom: 1px solid #ddd;
 }
-#main .sc-board .bd-flex .bd-list .bd-item a {
+#main .sc-board .bd-list .bd-item a {
   display: flex;
-  margin-left: 10px;
 }
-#main .sc-board .bd-flex .bd-list .bd-item a .date {
+#main .sc-board .bd-list .bd-item a .date {
   color: #888;
-  line-height: 60px;
+  line-height: 50px;
 }
-#main .sc-board .bd-flex .bd-list .bd-item a .text {
-  margin-left: 25px;
-  line-height: 60px;
+#main .sc-board .bd-list .bd-item a .text {
+  margin-left: 22px;
+  line-height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
