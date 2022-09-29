@@ -41,19 +41,25 @@
             padding-bottom: 20px;
         }
 
-        .content {
+        .reco-list {
             color: #fff;
-            position: relative;
-
-            .bg {
-                z-index: -1;
-
+            .reco-item {
+                padding: 45px 20px;
+                &:first-child {
+                    background: url(../images/contents/recomm01.jpg) no-repeat center center / cover;
+                }
+                &:nth-child(2) {
+                    background: url(../images/contents/recomm02.jpg) no-repeat center center / cover;
+                }
+                &:last-child {
+                    background: url(../images/contents/recomm03.jpg) no-repeat center center / cover;
+                }
             }
+            
 
             .text-box {
-                @include position('ct');
-                width: 280px;
-                height: 200px;
+                min-width: 280px;
+                min-height: 200px;
                 background: rgba(0, 0, 0, .7);
                 padding: 22px 15px;
 

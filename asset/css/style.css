@@ -291,30 +291,34 @@ img {
 #main .sc-recommend .headline {
   padding-bottom: 20px;
 }
-#main .sc-recommend .content {
+#main .sc-recommend .reco-list {
   color: #fff;
-  position: relative;
 }
-#main .sc-recommend .content .bg {
-  z-index: -1;
+#main .sc-recommend .reco-list .reco-item {
+  padding: 45px 20px;
 }
-#main .sc-recommend .content .text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  height: 200px;
+#main .sc-recommend .reco-list .reco-item:first-child {
+  background: url(../images/contents/recomm01.jpg) no-repeat center center/cover;
+}
+#main .sc-recommend .reco-list .reco-item:nth-child(2) {
+  background: url(../images/contents/recomm02.jpg) no-repeat center center/cover;
+}
+#main .sc-recommend .reco-list .reco-item:last-child {
+  background: url(../images/contents/recomm03.jpg) no-repeat center center/cover;
+}
+#main .sc-recommend .reco-list .text-box {
+  min-width: 280px;
+  min-height: 200px;
   background: rgba(0, 0, 0, 0.7);
   padding: 22px 15px;
 }
-#main .sc-recommend .content .text-box h3 {
+#main .sc-recommend .reco-list .text-box h3 {
   font-size: 16px;
   font-weight: bold;
   line-height: 20px;
   margin-bottom: 16px;
 }
-#main .sc-recommend .content .text-box p {
+#main .sc-recommend .reco-list .text-box p {
   font-size: 13px;
   line-height: 20px;
   text-align: justify;
